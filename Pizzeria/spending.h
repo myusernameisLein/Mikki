@@ -8,16 +8,20 @@ class Spending
     public:
         int month, day; // месяц и день уплаты расходов
         string category; // категория расходов (газ, свет, ремонт и тд)
-         string payee; // кому платим (поставщики газа, света, сервисный центр...)
         float amount; // сколько платим
-        Expense()
+        Spending()
         { }
-        Expense(int m, int d, string c, string p, float a) :
-        month(m), day(d), category(c), payee(p), amount(a)
 
-    {
-/* тут пусто! */
-    }
+        Spending(int m, int d, string c, string p, float a) :
+        month(m), day(d), category(c), amount(a)
+
+        {}
+        ~Spending();
+        //геттеры:
+        int GetMonth();
+        int GetDay();
+        string GetCategory();
+        float GetAmount();
 
 };
 

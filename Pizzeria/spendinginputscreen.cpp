@@ -5,27 +5,23 @@ SpendingInputScreen::SpendingInputScreen(SpendingRecord* per) : ptrSpendingRecor
 {
 /*пусто*/
 }
-//------------------------------------------------------
+
 void SpendingInputScreen::setSpending()
 {
-    int month, day;
-    string category, payee;
-    float amount;
     cout << "Введите месяц (1-12): ";
-    cin >> month;
-    cin.ignore(80, '\n');
+    getaLine(SpendingMonth);
+
     cout << "Введите день (1-31): ";
-    cin >> day;
-    cin.ignore(80, '\n');
+    getaLine(SpendingDate);
+
     cout << "Введите категорию расходов (Ремонт, Налоги): ";
-    getaLine(category);
-    cout << "Введите получателя (ПростоквашиноЭлектроСбыт): ";
-    getaLine(payee);
+    getaLine(SpendingCategory);
+
     cout << "Введите сумму (39.95): ";
-    cin >> amount;
-    cin.ignore(80, '\n');
+    getaLine(SpendingAmount);
+
     // создаем новый расход
-    Spending* ptrSpending = new Spending(month, day, category, payee, amount);
+    Spending* ptrSpending = new Spending(SpendingMonth, SpendingDate, SpendingCategory, SpendingAmount);
     // вставляем расход в список всех расходов
-     ptrSpendingRecord->insertExp(ptrSpending);
+     ptrSpendingList->insertSpend(ptrSpending);
 }
