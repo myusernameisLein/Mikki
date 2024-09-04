@@ -1,17 +1,17 @@
 #ifndef SPENDINGLIST
 #define SPENDINGLIST
 
-#include "libs.h"
+#include "spending.h"
 
 //Класс записей о затратах
-class ExpenseRecord
+class SpendingList
 {
     private:
-        vector<Expense*> vectPtrsExpenses; //вектор указателей на расходы
-        vector<Expense*>::iterator iter;
+        vector<SpendingList*> vectPtrsSpending; //вектор указателей на расходы
+        vector<SpendingList*>::iterator iter;
         public:
-        ~ExpenseRecord();
-        void insertExp(Expense*);
+        ~SpendingList();
+        void insertExp(Spending*);
         void display();
         float displaySummary(); // нужно для годового отчета
 };
