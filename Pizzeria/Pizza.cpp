@@ -41,6 +41,8 @@ return name;
 ///////////метод класса TenantInputScreen//////////////////
 void TenantInputScreen::setTenant() // добавить данные о жильце
 {
+cout << "1 - Food " << endl;
+cout << "2 - Drinks  " << endl;
 cout << "Введите имя жильца (Дядя Федор): " << endl;
 getaLine(tName);
 cout << "Введите номер комнаты (101): " << endl;
