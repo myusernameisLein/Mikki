@@ -1,0 +1,5 @@
+#ifndef SPENDINGLIST
+#define SPENDINGLIST
+
+#endif // SPENDINGLIST
+

@@ -1,0 +1,5 @@
+#ifndef GLOBALMETHODS
+#define GLOBALMETHODS
+
+#endif // GLOBALMETHODS
+
