@@ -12,5 +12,6 @@ class SpendingInputScreen
         void setSpending();
 };
 
+
 #endif // SPENDINGINPUTSCREEN
 
